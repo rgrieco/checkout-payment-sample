@@ -5,7 +5,7 @@ const mercadopago = require("mercadopago");
 
 // REPLACE WITH YOUR ACCESS TOKEN AVAILABLE IN: https://developers.mercadopago.com/panel
 mercadopago.configure({
-	access_token: "ACCESS_TOKEN",
+	access_token: "TEST-3130846003507029-030223-2072232e0bb3d174f1f339e808490e1c-276402374",
 });
   
 
@@ -15,7 +15,7 @@ app.use(cors());
 app.use(express.static("../../client"));
 
 app.get("/", function (req, res) {
-  res.status(200).sendFile("index.html");
+  res.status(200).sendFile("F:/checkout-payment-sample/client/index.html");
 }); 
 
 app.post("/create_preference", (req, res) => {
@@ -29,9 +29,9 @@ app.post("/create_preference", (req, res) => {
 			}
 		],
 		back_urls: {
-			"success": "http://localhost:8080/feedback",
-			"failure": "http://localhost:8080/feedback",
-			"pending": "http://localhost:8080/feedback"
+			"success": "http://localhost:3000/feedback",
+			"failure": "http://localhost:3000/feedback",
+			"pending": "http://localhost:3000/feedback"
 		},
 		auto_return: "approved",
 	};
@@ -54,6 +54,6 @@ app.get('/feedback', function(req, res) {
 	});
 });
 
-app.listen(8080, () => {
-  console.log("The server is now running on Port 8080");
+app.listen(3000, () => {
+  console.log("The server is now running on Port 3000");
 });

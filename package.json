@@ -1,5 +1,28 @@
 {
+  "name": "mp-card-payment-nodejs",
+  "version": "1.0.0",
+  "description": "- Node v10 or higher\r - Read our [testing instructions](https://www.mercadopago.com/developers/en/guides/online-payments/checkout-pro/test-integration)\r - Setup your credentials: \r   - Public Key on client-side and locale `index.js`\r   - Private Access Token on server-side `server.js`",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "debug": "nodemon --inspect=5005 server.js"
+  },
   "dependencies": {
-    "mercadopago": "^1.5.14"
-  }
+    "cors": "^2.8.5",
+    "express": "4.17.1",
+    "mercadopago": "^1.5.8"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rgrieco/checkout-payment-sample.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rgrieco/checkout-payment-sample/issues"
+  },
+  "homepage": "https://github.com/rgrieco/checkout-payment-sample#readme"
 }

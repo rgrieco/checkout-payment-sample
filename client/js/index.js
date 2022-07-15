@@ -1,7 +1,7 @@
 // Add SDK credentials
 // REPLACE WITH YOUR PUBLIC KEY AVAILABLE IN: https://developers.mercadopago.com/panel
 //const mercadopago = require("MercadoPago");
-const mercadopago = MercadoPago('TEST-3130846003507029-030223-2072232e0bb3d174f1f339e808490e1c-276402374', {
+const mercadopago = MercadoPago('TEST-e201a531-8a54-4934-bf48-47231a55c20b', {
   locale: 'es-UY' // The most common are: 'pt-BR', 'es-AR' and 'en-US'
 });
 
